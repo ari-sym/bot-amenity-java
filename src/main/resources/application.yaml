@@ -1,0 +1,21 @@
+bdk:
+  host: sup.symphony.com
+
+  bot:
+    username: bot-#template#
+    privateKey:
+      path: rsa/sup/privatekey.pem
+
+  agent:
+    host: sup-agent.symphony.com
+
+  pod:
+    host: sup.symphony.com
+
+  keyManager:
+    host: sup-km.symphony.com
+
+
+logging:
+  level:
+    com.symphony: debug

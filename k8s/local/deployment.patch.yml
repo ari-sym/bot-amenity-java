@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bot-#template#
+spec:
+  selector:
+    matchLabels:
+      app: bot-#template#
+  template:
+    spec:
+      containers:
+        - name: bot-#template#
+          env:
+            - name: BDK_BOT_PRIVATEKEY_PATH
+              value: rsa/privatekey.pem

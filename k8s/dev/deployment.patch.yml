@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bot-#template#
+spec:
+  selector:
+    matchLabels:
+      app: bot-#template#
+  template:
+    spec:
+      containers:
+        - name: bot-#template#
+          resources:
+            requests:
+              cpu: 20m
+            limits:
+              cpu: 100m
+          envFrom:
+            - configMapRef:
+                name: bot-#template#-config

@@ -1,0 +1,16 @@
+name: Default - Run Tests
+
+on:
+  push:
+    branches-ignore:
+      - master
+  pull_request:
+    branches-ignore:
+      - master
+
+jobs:
+
+  Checks:
+    uses: ./.github/workflows/tests-workflow.yml
+    secrets:
+      RSA_PRIVATE_KEY: ${{ secrets.RSA_PRIVATE_KEY }}

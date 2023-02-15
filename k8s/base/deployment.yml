@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bot-#template#
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bot-#template#
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5
+  template:
+    metadata:
+      labels:
+        app: bot-#template#
+    spec:
+      volumes:
+        - name: rsa-key
+          secret:
+            secretName: bot-#template#-private-key
+      containers:
+        - name: bot-#template#
+          image: LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE:TAG
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: 100m
+            limits:
+              cpu: 100m
+          volumeMounts:
+            - name: rsa-key
+              mountPath: "/rsa"
+              readOnly: true

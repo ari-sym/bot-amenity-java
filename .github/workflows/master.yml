@@ -1,0 +1,27 @@
+name: Master - Test and Deploy (DEV env)
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+
+  Checks:
+    uses: ./.github/workflows/tests-workflow.yml
+    secrets:
+      RSA_PRIVATE_KEY: ${{ secrets.RSA_PRIVATE_KEY }}
+
+  Deploy:
+    needs: Checks
+    uses: ./.github/workflows/deploy-workflow.yml
+    with:
+      env: dev
+      GKE_CLUSTER: dev-cluster
+      GKE_ZONE: us-central1
+      REPOSITORY: dev-bot-repository
+      GAR_LOCATION: us-central1
+    secrets:
+      RSA_PRIVATE_KEY: ${{ secrets.RSA_PRIVATE_KEY }}
+      GKE_PROJECT: ${{ secrets.GKE_PROJECT }}
+      GKE_SA_KEY: ${{ secrets.GKE_SA_KEY }}

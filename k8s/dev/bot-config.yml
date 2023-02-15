@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bot-#template#-config
+data:
+  BDK_BOT_PRIVATEKEY_PATH: rsa/private-key.pem
+  BDK_BOT_USERNAME: bot-#template#
+  BDK_HOST: develop2.symphony.com
+  BDK_AGENT_HOST: develop2.symphony.com
+  BDK_POD_HOST: develop2.symphony.com
+  BDK_KEYMANAGER_HOST: develop2.symphony.com
+  LOGGING_LEVEL_COM_SYMPHONY: info
