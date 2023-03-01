@@ -1,11 +1,11 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: bot-#template#-nsp
+namespace: bot-amenity-java-nsp
 resources:
   - ../base
   - bot-config.yml
 secretGenerator:
-  - name: bot-#template#-private-key
+  - name: bot-amenity-java-private-key
     files:
       - private-key.pem
 patches:

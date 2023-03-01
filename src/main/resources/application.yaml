@@ -1,19 +1,26 @@
 bdk:
-  host: sup.symphony.com
+  host: develop2.symphony.com
 
   bot:
-    username: bot-#template#
+    username: dev2-ari-bot-1
     privateKey:
-      path: rsa/sup/privatekey.pem
+      path: rsa/privatekey.pem
 
-  agent:
-    host: sup-agent.symphony.com
+#  host: sup.symphony.com
 
-  pod:
-    host: sup.symphony.com
+#  bot:
+#    username: bot-amenity-java
+#    privateKey:
+#      path: rsa/sup/privatekey.pem
 
-  keyManager:
-    host: sup-km.symphony.com
+#  agent:
+#    host: sup-agent.symphony.com
+
+#  pod:
+#    host: sup.symphony.com
+
+#  keyManager:
+#    host: sup-km.symphony.com
 
 
 logging:

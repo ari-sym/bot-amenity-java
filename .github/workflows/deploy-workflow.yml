@@ -37,10 +37,10 @@ jobs:
       PROJECT_ID: ${{ secrets.GKE_PROJECT }}
       GKE_CLUSTER: ${{ inputs.GKE_CLUSTER }}
       GKE_ZONE: ${{ inputs.GKE_ZONE }}
-      DEPLOYMENT_NAME: bot-#template#
+      DEPLOYMENT_NAME: bot-amenity-java
       GAR_LOCATION: ${{ inputs.GAR_LOCATION }}
       REPOSITORY: ${{ inputs.REPOSITORY }}
-      IMAGE: bot-#template#
+      IMAGE: bot-amenity-java
       RSA_SECRET_FILE_NAME: private-key.pem
       RSA_SECRET_VALUE: ${{ secrets.RSA_PRIVATE_KEY }}
 

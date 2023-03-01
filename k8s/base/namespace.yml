@@ -1,6 +1,6 @@
 kind: Namespace
 apiVersion: v1
 metadata:
-  name: bot-#template#-nsp
+  name: bot-amenity-java-nsp
   labels:
-    name: bot-#template#-nsp
+    name: bot-amenity-java-nsp

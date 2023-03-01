@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.symphony</groupId>
-    <artifactId>bot-#template#</artifactId>
+    <artifactId>bot-amenity-java</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>

@@ -3,7 +3,7 @@
 This is a template repository to be used by the [ProfServ team](https://perzoinc.atlassian.net/wiki/spaces/PS/overview) 
 to create new Java Bots.
 
-To use this template, replace all instances of `#template#` in this repository by your bot name.
+To use this template, replace all instances of `amenity-java` in this repository by your bot name.
 
 Please, read our [Best Practices](https://perzoinc.atlassian.net/wiki/spaces/PS/pages/2242905098/Best+Practices) before contributing.
 

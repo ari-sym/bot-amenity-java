@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bot-#template#
+  name: bot-amenity-java
 spec:
   selector:
     matchLabels:
-      app: bot-#template#
+      app: bot-amenity-java
   template:
     spec:
       containers:
-        - name: bot-#template#
+        - name: bot-amenity-java
           env:
             - name: BDK_BOT_PRIVATEKEY_PATH
               value: rsa/privatekey.pem

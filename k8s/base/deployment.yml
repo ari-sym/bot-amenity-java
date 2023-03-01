@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bot-#template#
+  name: bot-amenity-java
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bot-#template#
+      app: bot-amenity-java
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -15,14 +15,14 @@ spec:
   template:
     metadata:
       labels:
-        app: bot-#template#
+        app: bot-amenity-java
     spec:
       volumes:
         - name: rsa-key
           secret:
-            secretName: bot-#template#-private-key
+            secretName: bot-amenity-java-private-key
       containers:
-        - name: bot-#template#
+        - name: bot-amenity-java
           image: LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE:TAG
           ports:
             - containerPort: 8080

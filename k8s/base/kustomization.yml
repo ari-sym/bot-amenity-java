@@ -1,6 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: bot-#template#-nsp
+namespace: bot-amenity-java-nsp
 resources:
   - namespace.yml
   - deployment.yml
